@@ -19,8 +19,9 @@ def run_game():
     #开始游戏的主循环
     while True:
 
-        #监视屏幕和鼠标事件
-        gf.check_events()
+        #监视屏幕和鼠标和键盘事件
+        gf.check_events(ship)
+        ship.update()
         #更新屏幕上的图像，并切换到新图像
         gf.update_screen(ai_settings,screen,ship,people)
 
